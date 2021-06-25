@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Using Factory</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.js"
+        integrity="sha512-ikQJHkjSbJO2+xpZXCaYVUGUXpz+c8Ip02U8DaQDuLwADRbfkuPh6fyNUjD1zNuPjqj3j6y11iOydnYU8of1bQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/3.0.0/toaster.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.0.3/angular-chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+    <div class="container-fluid">
+
+
+        <h1 class="heading">
+            {{data.chartName}} Price Index
+        </h1>
+
+        <div class="row" style="margin: 5% auto;">
+
+            <div class="col-4"></div>
+
+            <div class="col-4">
+                <div class="col-11 card" style="border: solid purple;">
+                    <h2>1 {{data.chartName}} equals</h2>
+                    <br>
+                    <div ng-view></div>
+                </div>
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <h2>Also, Check Price In Terms Of</h2>
+
+        <div class="main">
+            <a href="#!USD"><button class="btn btn-info">USD</button></a>
+            <a href="#!EURO"><button class="btn btn-info">EURO</button></a>
+            <a href="#!GBP"><button class="btn btn-info">GBP</button></a>
+        </div>
+
+        <footer class="page-footer bg-light">
+            <label><strong>Last Updated:</strong> {{data.time.updated}}</label>
+            <p>{{data.disclaimer}}.</p>
+        </footer>
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
